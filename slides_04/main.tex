@@ -19,7 +19,7 @@
 
 \title{SST1 Übungsstunde 4}
 \author{Matteo Dietz}
-\date{October 2024}
+\date{October 2025}
 
 \begin{document}
 
@@ -27,6 +27,8 @@
 
 \begin{frame}{Themenüberblick}
     \begin{itemize}
+        \item \textbf{Repetition: Zeitinvarianz}
+        \item[] 
         \item \textbf{Analoge LTI Systeme im Zeitbereich}:
         \item[] Impulsantwort
         \item[] Faltung, Eigenschaften der Faltung, Graphische Faltung
@@ -36,9 +38,34 @@
 
 \begin{frame}{Aufgaben für diese Woche}
     \begin{itemize}
-        \item[] \textbf{31}, \textbf{33}, 34, \textbf{35}, 36, \textbf{37}, \textbf{38}, \textbf{39}, \textbf{40}, \textbf{41}, \textbf{42}, \textbf{43}, 44, \textbf{45}
+        \item[] \underline{\textbf{31}}, \underline{\textbf{33}}, 34, \underline{\textbf{35}}, 36, \underline{\textbf{37}}, \underline{\textbf{38}}, \underline{\textbf{39}}, \underline{\textbf{40}}, \underline{\textbf{41}}, \underline{\textbf{42}}, \underline{\textbf{43}}, 44, \underline{\textbf{45}}
         \item[] 
-        \item[] Die \textbf{fettgedruckten} Übungen empfehle ich, weil sie wesentlich zu eurem Verständnis der Theorie beitragen und/oder sehr prüfungsrelevant sind.
+        \item[] Die \underline{\textbf{fettgedruckten}} Übungen empfehle ich, weil sie wesentlich zu eurem Verständnis der Theorie beitragen und/oder sehr prüfungsrelevant sind.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Repetition: Zeitinvarianz}
+    $$Hx(t) = t \cdot x(t) \hspace{3cm} T_\tau x(t) = x(t-\tau)$$
+    \vspace*{-0.75cm}
+    \begin{center}
+        \includegraphics[width=0.8\linewidth]{figures/Zeitverschiebung.jpg}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Beispiel}
+    \vspace*{-0.32cm}
+    \begin{center}
+        \includegraphics[width=0.8\linewidth]{figures/Zeitverschiebung_bsp.jpg}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Punktenotation (aus Lösung 30.c) \& 28)}
+    \begin{itemize}
+        \item $(Hx(\cdot -\tau))$ bedeutet: $H$ wirkt auf das verschobene Signal $x(t-\tau) = (T_\tau x)(t)$, also:
+        $$(Hx(\cdot -\tau))(t) = (HT_\tau x)(t) \textcolor{blue}{\; = tx(t-\tau)}$$
+        \item[]
+        \item $(Hx)(t-\tau)$ bedeutet: Antwort $y(t) = (Hx)(t)$ des Systems $H$ auf Eingangssignal $x(t)$ wird um $\tau$ zeitverschoben, also:
+        $$(Hx)(t-\tau) = (T_\tau Hx)(t) \textcolor{blue}{\; = (t-\tau)x(t-\tau)}$$
     \end{itemize}
 \end{frame}
 
