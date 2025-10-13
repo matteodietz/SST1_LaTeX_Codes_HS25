@@ -61,22 +61,25 @@
 
 \title{SST1 Übungsstunde 5}
 \author{Matteo Dietz}
-\date{October 2024}
+\date{October 2025}
 
 \begin{document}
 
 \maketitle
 
-\begin{frame}{Philosophisches}
-    \begin{itemize}
-        \item Roughly speaking, wie viele Studenten gehen ca. zur Vorlesung?
-        \item[] 
-        \item \alert{Fokussiert euch in SST1 mehr auf Essenz als auf Strategie!}
-    \end{itemize}
-\end{frame}
+% \begin{frame}{Philosophisches}
+%     \begin{itemize}
+%         \item Roughly speaking, wie viele Studenten gehen ca. zur Vorlesung?
+%         \item[] 
+%         \item \alert{Fokussiert euch in SST1 mehr auf Essenz als auf Strategie!}
+%     \end{itemize}
+% \end{frame}
 
 \begin{frame}{Themenüberblick}
     \begin{itemize}
+    \item \textbf{Graphische Faltung und Systemeigenschaften}
+    \item[] Repetition und alte Prüfungsaufgabe
+    \item[] 
     \item \textbf{Verallgemeinerte Funktionen:}
     \item[] Funktionale
     \item[] $\delta-$Funktion und ihre Eigenschaften
@@ -95,9 +98,62 @@
 
 \begin{frame}{Aufgaben für diese und nächste Woche}
     \begin{itemize}
-        \item[] \textbf{46}, 47, \textbf{48}, \textbf{49}, \textbf{50}, \textbf{51}, 52, 53, \textbf{54}, \textbf{55}, \textbf{56}, \textbf{57}, 58, \textbf{59}, \textbf{60}, 61, \textbf{62}, 63, \textbf{64}, 65, \textbf{66}
+        \item[] \underline{\textbf{46}}, 47, \underline{\textbf{48}}, \underline{\textbf{49}}, \underline{\textbf{50}}, \underline{\textbf{51}}, 52, 53, \underline{\textbf{54}}, \underline{\textbf{55}}, \underline{\textbf{56}}, \underline{\textbf{57}}, 58, \underline{\textbf{59}}, \underline{\textbf{60}}, 61, \underline{\textbf{62}}, 63, \underline{\textbf{64}}, 65, \underline{\textbf{66}}
         \item[] 
-        \item[] Die \textbf{fettgedruckten} Übungen empfehle ich, weil sie wesentlich zu eurem Verständnis der Theorie beitragen und/oder sehr prüfungsrelevant sind.
+        \item[] Die \underline{\textbf{fettgedruckten}} Übungen empfehle ich, weil sie wesentlich zu eurem Verständnis der Theorie beitragen und/oder sehr prüfungsrelevant sind.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Graphische Faltung: Kochrezept}
+    \fcolorbox{darkblue}{lightblue}{%
+\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}{\begin{itemize}
+    \item[] \textbf{Ziel}: Wir wollen $y(t) = \displaystyle\int_{-\infty}^{\infty} x(t-\tau)h(\tau) \text{d}\tau$ berechnen.
+    \item[1)] $x(\tau)$ spiegeln um $\tau = 0$, um $x(-\tau)$ zu erhalten.
+    \item[2)] Das gespiegelte $x(\tau)$ um $t$ verschieben.
+    \item[] \vspace*{-0.5cm}\begin{multicols}{2}
+        \begin{itemize}
+        \item nach rechts für $t>0$
+        \item[] $\implies x(t -\tau) = x(-(\tau-t))$
+        \item nach links für $t<0$
+    \end{itemize}
+    \end{multicols}
+    \item[3)] \vspace*{-0.5cm}Das gespiegelte \& verschobene $x(\tau)$ mit $h(\tau)$ multiplizieren. $\implies x(t-\tau)h(\tau)$
+    \item[4)] Integrieren \& den Wert von $y(t)$ bei $t$ eintragen.
+    \item[5)] Zurück zu 2) mit neuem $t$.
+\end{itemize}
+}}%
+\end{frame}
+
+\begin{frame}{Graphische Faltung: Hinweise}
+    \textbf{Hinweise}: Vergesst nicht, dass die Faltung kommutativ ist, d.h.
+    $$\int_{-\infty}^\infty x(t-\tau) h(\tau) \text{d}\tau = \int_{-\infty}^\infty x(\tau) h(t-\tau) \text{d}\tau$$
+    Spiegelt und verschiebt das einfachere Signal und fixiert das kompliziertere!
+\end{frame}
+
+\begin{frame}{Zusammenfassung: Eigenschaften der Impulsantwort}
+    \fcolorbox{darkblue}{lightblue}{%
+\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}{
+%\vspace*{-0.5cm}
+\begin{itemize}
+    \item[] \textbf{Kausalität}
+    \item[] Das LTI-System ist kausal 
+            $\Leftrightarrow h(t) = 0 \text{ für } t < 0.$
+    \item[] 
+    \item[] \textbf{Gedächtnislosigkeit}
+    \item[] Das LTI-System $H$ ist gedächtnislos $\Leftrightarrow$
+        $$y(t) = (Hx)(t) = \alpha x(t), \hspace{10pt} \alpha \in \mathbb{C} \Leftrightarrow h(t) = \alpha \delta(t) $$
+    \item[] 
+    \item[] \textbf{BIBO-Stabilität}
+    \item[] Wenn $h \in L^1$, dann ist das LTI-System BIBO-stabil.
+\end{itemize}
+}}%
+\end{frame}
+
+\begin{frame}{Aufgaben}
+    \begin{itemize}
+        \item \textbf{Aufgabe 45}
+        \item[]
+        \item \textbf{Prüfungsaufgabe: Frühjahr 2024, Aufgabe 1}
     \end{itemize}
 \end{frame}
 
