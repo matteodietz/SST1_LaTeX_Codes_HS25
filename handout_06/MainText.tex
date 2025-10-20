@@ -64,7 +64,7 @@
 }
 
 % set up footer
-\fancyfoot[L]{mdietz, ÜS 6}
+\fancyfoot[L]{mdietz, ÜS 7}
 \fancyfoot[C]{\thepage}
 \fancyfoot[R]{\monthyeardate\today}
 
@@ -125,13 +125,11 @@
 \setlength{\parskip}{\baselineskip}  % add skip between paragraphs
 
 \vspace*{-5px}
-\section*{Übungsstunde 6}
+\section*{Übungsstunde 7}
 
 \section*{Themenüberblick}
 \begin{itemize}
     \item \textbf{Analoge Lineare Systeme im Frequenzbereich:}
-    \item[] Kurze Repetition: Fouriertransformation und Eigenschaften
-    \item[] Eigenfunktionen von LTI Systemen
     \item[] Antwort von LTI-Systemen im Frequenzbereich
     \item[] Kaskadierung von LTI-Systemen
     \item \textbf{Spezielle Eingangssignale von LTI-Systemen}
@@ -145,91 +143,12 @@
 \section*{Aufgaben für diese Woche}
 \vspace{-0.5cm}
 
-Nochmals dieselben wie letzte Woche und \textbf{69}, \textbf{70}, \textbf{71}, \textbf{72}, 73, \textbf{74}\\
+Nochmals dieselben wie letzte Woche und \underline{\textbf{69}}, \underline{\textbf{70}}, \underline{\textbf{71}}, \underline{\textbf{72}}, 73, \underline{\textbf{74}}\\
 \vspace{-0.5cm}
 
-Die \textbf{fettgedruckten} Übungen empfehle ich, weil sie wesentlich zu eurem Verständnis der Theorie beitragen und/oder sehr prüfungsrelevant sind.
+Die \underline{\textbf{fettgedruckten}} Übungen empfehle ich, weil sie wesentlich zu eurem Verständnis der Theorie beitragen und/oder sehr prüfungsrelevant sind.
 
 \vfill \null
-\pagebreak
-
-\section*{Repetition: Eigenschaften der Fouriertransformation}
-\vspace*{-0.5cm}
-\subsection*{Definition}
-\vspace*{-0.5cm}
-\fcolorbox{darkblue}{lightblue}{%
-\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}{
-    $$\text{(FT)} \hspace{20pt} \hat{x}(f) = (\mathcal{F}x)(f) = \int_{-\infty}^{\infty}x(t)e^{-2\pi i f t}\text{d}t$$
-    $$\text{(IFT)} \hspace{10pt} x(t) = (\mathcal{F}^{-1}\hat{x})(t) = \int_{-\infty}^{\infty}\hat{x}(f)e^{2\pi i f t}\text{d}f$$
-}}%
-
-\vspace*{-0.5cm}
-\subsection*{Riemann-Lebesgue Lemma}
-\vspace*{-0.5cm}
-Es sei $x$ ein absolut integrierbares Signal, d.h. $x \in L^1$. Dann ist $(\mathcal{F}x)(f) = \hat{x}(f)$ stetig und $\displaystyle\lim_{|f| \to \infty} \hat{x}(f) = 0$.
-
-\subsection*{Formelsammlung}
-\begin{center}
-    \includegraphics[width=0.8\linewidth]{docimgs/FT_eigenschaften.png}
-\end{center}
-
-\pagebreak
-
-\subsection*{Repetition: Parseval und Plancherel}
-
-\fcolorbox{darkblue}{lightblue}{%
-    \parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}{
-    \begin{center}
-        \textbf{Plancherelsche Identität:}
-    \end{center}
-    $$\langle x, y \rangle = \int_{-\infty}^{\infty} x(t)y^\ast (t)\text{d}t = \int_{-\infty}^{\infty}\hat{x}(f)\hat{y}^\ast(f)\text{d}f = \langle \hat{x}, \hat{y} \rangle$$
-    \begin{center}
-        \textbf{Parsevalsche Beziehung:}
-    \end{center}
-    $$||x||^2 = \langle x, x \rangle = \int_{-\infty}^{\infty} |x(t)|^2\text{d}t = \int_{-\infty}^{\infty}|\hat{x}(f)|^2\text{d}f = \langle \hat{x}, \hat{x} \rangle = ||\hat{x}||^2$$
-    }}
-
-\subsection*{Aufgabe 66}
-\vspace*{-0.5cm}
-Von einem Signal $x(t)$ ist die Fouriertransformierte gegeben als 
-$$\hat{x}(f) = \begin{cases}
-    1, \hspace{15pt} |f| \leq f_0\\
-    0, \hspace{15pt} |f| > f_0
-\end{cases}$$
-Berechnen Sie die Energie des Signals $y(t) = \displaystyle\frac{\text{d}^2x(t)}{\text{d}t^2}$ gegeben durch
-$$E_y = \int_{-\infty}^\infty |y(t)|^2 \text{d}t$$
-
-\begin{tikzpicture}
-    % Define the box size and grid spacing
-    \draw[step=0.5cm,gray!50,very thin] (0,0) grid (16.5,6.5
-    ); % (0,0) is bottom-left corner, (10,10) is top-right corner
-\end{tikzpicture}
-
-\vfill \null
-\pagebreak
-
-\subsection*{Prüfungsaufgabe: Sommer 2019, Aufgabe 2}
-
-\includegraphics[width=0.9\linewidth]{docimgs/2019_ex2.png}
-
-
-\vfill \null
-\pagebreak
-
-\begin{tikzpicture}
-    % Define the box size and grid spacing
-    \draw[step=0.5cm,gray!50,very thin] (0,0) grid (16.5,21
-    ); % (0,0) is bottom-left corner, (10,10) is top-right corner
-\end{tikzpicture}
-
-\pagebreak
-
-\begin{tikzpicture}
-    % Define the box size and grid spacing
-    \draw[step=0.5cm,gray!50,very thin] (0,0) grid (16.5,21
-    ); % (0,0) is bottom-left corner, (10,10) is top-right corner
-\end{tikzpicture}
-
 \pagebreak
 
 \section*{Eigenfunktionen analoger LTI-Systeme}
