@@ -181,11 +181,32 @@ Es sei $x$ ein absolut integrierbares Signal, d.h. $x \in L^1$.
 
 Dann ist $(\mathcal{F}x)(f) = \hat{x}(f)$ stetig und $\displaystyle\lim_{|f| \to \infty} \hat{x}(f) = 0$.
 
-\subsection*{Wichtige Beziehungen und Transformationspaare}
+\section*{Wichtige Beziehungen und Transformationspaare}
 \vspace*{-0.5cm}
 
+\subsection*{Verschiebung im Zeitbereich}
+\vspace*{-0.5cm}
+$x(t-t_0) \; \transform{2.}{1} \; e^{-2 \pi i f t_0} \hat{x}(f)$
 
-und ein paar wichtige Eigenschaften.
+\begin{tikzpicture}
+    % Define the box size and grid spacing
+    \draw[step=0.5cm,gray!50,very thin] (0,0) grid (16.5,5); % (0,0) is bottom-left corner, (10,10) is top-right corner
+\end{tikzpicture}
+
+\vspace*{-0.25cm}
+Analog dazu gilt auch $e^{2\pi i f_0 t}x(t) \; \transform{3.}{1} \; \hat{x}(f-f_0) $
+
+\subsection*{Faltung im Zeitbereich entspricht Multiplikation im Frequenzbereich}
+\vspace*{-0.5cm}
+$(x \ast y)(t) \; \transform{7.}{1} \; \hat{x}(f) \hat{y}(f)$
+
+\begin{tikzpicture}
+    % Define the box size and grid spacing
+    \draw[step=0.5cm,gray!50,very thin] (0,0) grid (16.5,4); % (0,0) is bottom-left corner, (10,10) is top-right corner
+\end{tikzpicture}
+
+\vspace*{-0.25cm}
+Analog dazu gilt auch $x(t)y(t) \; \transform{8.}{1} \; (\hat{x} \ast \hat{y})(f)$
 
 \vfill \null
 \pagebreak
@@ -253,7 +274,7 @@ Berechnen Sie die Fouriertransformierte der folgenden Signale:
 \vfill \null
 \pagebreak
 
-\section*{Zentrale Eigenschaften der Fouriertransformation}
+\section*{Weitere Zentrale Eigenschaften der Fouriertransformation}
 \vspace*{-0.5cm}
 \subsection*{Dualität der Fouriertransformation}
 Man kann die Fouriertransformation als Rotation in der Zeit-Frequenz-Ebene betrachten:

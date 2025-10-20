@@ -65,7 +65,7 @@
 \definecolor{darkblue}{RGB}{0, 0, 139}
 \definecolor{lightblue}{RGB}{173, 216, 230}
 
-\title{SST1 Übungsstunde 6}
+\title{SST1 Übungsstunde 7}
 \author{Matteo Dietz}
 \date{November 2024}
 
@@ -76,7 +76,6 @@
 \begin{frame}{Themenüberblick}
     \begin{itemize}
         \item \textbf{Analoge Lineare Systeme im Frequenzbereich:}
-        \item[] Kurze Repetition: Fouriertransformation und Eigenschaften
         \item[] Eigenfunktionen von LTI Systemen
         \item[] Antwort von LTI-Systemen im Frequenzbereich
         \item[] Kaskadierung von LTI-Systemen
@@ -99,55 +98,6 @@
         \item[] Dieselben wie letzte Woche und \textbf{69}, \textbf{70}, \textbf{71}, \textbf{72}, 73, \textbf{74}, 
         \item[] 
         \item[] Die \textbf{fettgedruckten} Übungen empfehle ich, weil sie wesentlich zu eurem Verständnis der Theorie beitragen und/oder sehr prüfungsrelevant sind.
-    \end{itemize}
-\end{frame}
-
-\begin{frame}{Repetition: Eigenschaften der Fouriertransformation}
-    \begin{itemize}
-        \item \textbf{Definition}:
-        \item[] 
-        \item[] \fcolorbox{darkblue}{lightblue}{%
-    \parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}{
-    $$\text{(FT)} \hspace{20pt} \hat{x}(f) = (\mathcal{F}x)(f) = \int_{-\infty}^{\infty}x(t)e^{-2\pi i f t}\text{d}t$$
-    $$\text{(IFT)} \hspace{10pt} x(t) = (\mathcal{F}^{-1}\hat{x})(t) = \int_{-\infty}^{\infty}\hat{x}(f)e^{2\pi i f t}\text{d}f$$
-}}%
-    \end{itemize}
-\end{frame}
-
-\begin{frame}{Riemann-Lebesgue Lemma}
-    \begin{itemize}
-        \item Es sei $x$ ein absolut integrierbares Signal, d.h. $x \in L^1$.
-        \item[] 
-        \item[]  Dann ist $(\mathcal{F}x)(f) = \hat{x}(f)$ stetig und $\displaystyle\lim_{|f| \to \infty} \hat{x}(f) = 0$.
-    \end{itemize}
-\end{frame}
-
-\begin{frame}{Formelsammlung}
-    \begin{center}
-        \vspace*{-0.25cm}
-        \includegraphics[width=0.6\linewidth]{figures/FT_eigenschaften.png}
-    \end{center}
-\end{frame}
-
-\begin{frame}{Parseval und Plancherel}
-    \fcolorbox{darkblue}{lightblue}{%
-    \parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}{
-    \begin{center}
-        \textbf{Plancherelsche Identität:}
-    \end{center}
-    $$\langle x, y \rangle = \int_{-\infty}^{\infty} x(t)y^\ast (t)\text{d}t = \int_{-\infty}^{\infty}\hat{x}(f)\hat{y}^\ast(f)\text{d}f = \langle \hat{x}, \hat{y} \rangle$$
-    \begin{center}
-        \textbf{Parsevalsche Beziehung:}
-    \end{center}
-    $$||x||^2 = \langle x, x \rangle = \int_{-\infty}^{\infty} |x(t)|^2\text{d}t = \int_{-\infty}^{\infty}|\hat{x}(f)|^2\text{d}f = \langle \hat{x}, \hat{x} \rangle = ||\hat{x}||^2$$
-    }}
-\end{frame}
-
-\begin{frame}{Aufgaben}
-    \begin{itemize}
-        \item \textbf{Aufgabe 66}
-        \item[] 
-        \item \textbf{Prüfungsaufgabe: Sommer 2019, Aufgabe 2}
     \end{itemize}
 \end{frame}
 
