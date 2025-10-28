@@ -67,7 +67,7 @@
 
 \title{SST1 Übungsstunde 7}
 \author{Matteo Dietz}
-\date{October 2024}
+\date{October 2025}
 
 \begin{document}
 
@@ -132,7 +132,13 @@
 \end{frame}
 
 \begin{frame}{Antwort von LTI-Systemen im Frequenzbereich}
-    
+  \begin{small} \begin{align*}
+    \hat{y}(f) &= \widehat{(x \ast h)}(f) = \int_{-\infty}^\infty (x\ast h)(t)e^{-2\pi i f t}\text{d}t\\
+               &= \int_{-\infty}^\infty \int_{-\infty}^\infty h(\tau)x(t-\tau)\text{d}\tau e^{-2 \pi i f t}\text{d}t
+               = \int_{-\infty}^\infty h(\tau) \int_{-\infty}^\infty x(t-\tau) e^{-2\pi ift} \text{d}t\text{d}\tau\\
+               &= \int_{-\infty}^\infty h(\tau)e^{-2\pi if\tau} \underbrace{\int_{-\infty}^\infty x(s)e^{-2\pi ifs}\text{d}s}_{\hat{x}(f)}\text{d}\tau
+    = \hat{x}(f)\underbrace{\int_{-\infty}^{\infty} h(\tau)e^{-2\pi if\tau}\text{d}\tau}_{\hat{h}(f)}\\ &= \hat{x}(f)\hat{h}(f)
+  \end{align*} \end{small}
 \end{frame}
 
 \begin{frame}{Antwort von LTI-Systemen im Frequenzbereich}
