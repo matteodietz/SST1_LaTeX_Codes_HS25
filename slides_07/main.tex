@@ -65,9 +65,9 @@
 \definecolor{darkblue}{RGB}{0, 0, 139}
 \definecolor{lightblue}{RGB}{173, 216, 230}
 
-\title{SST1 Übungsstunde 7}
+\title{SST1 Übungsstunde 8}
 \author{Matteo Dietz}
-\date{November 2024}
+\date{November 2025}
 
 \begin{document}
 
@@ -88,11 +88,9 @@
 
 \begin{frame}{Aufgaben für diese Woche}
     \begin{itemize}
-        \item[] \textbf{67}, \textbf{68}, 69, \textbf{70}, 71, \textbf{72}, 73, 74, 75, \textbf{76}, \textbf{77}
-        \item[] 
-        \item[] 69-74 waren schon letze Woche dabei.
-        \item[] 
-        \item[] Die \textbf{fettgedruckten} Übungen empfehle ich, weil sie wesentlich zu eurem Verständnis der Theorie beitragen und/oder sehr prüfungsrelevant sind.
+      \item[] \underline{\textbf{67}}, \underline{\textbf{68}}, 69, \underline{\textbf{70}}, 71, \underline{\textbf{72}}, 73, 74, 75, \underline{\textbf{76}}, \underline{\textbf{77}}, 78, \underline{\textbf{79}}, \underline{\textbf{80}}, 81, \underline{\textbf{82}}\
+        \item[]
+        \item[] Die \underline{\textbf{fettgedruckten}} Übungen empfehle ich, weil sie wesentlich zu eurem Verständnis der Theorie beitragen und/oder sehr prüfungsrelevant sind.
     \end{itemize}
 \end{frame}
 
@@ -239,7 +237,7 @@
     \begin{itemize}
     \item $e^{i\varphi(f)}$ entspricht einer Zeitverzögerung von $t_0$.
     \item[] 
-    \item Wir schreiben $h(t) = \underbrace{|\hat{h}(f)|}_{=:\hat{h}_{id}(f)} e^{-2\pi i f t_0} \; \invtransform{2.}{1.5} \; h_{id}(t-t_0)$
+    \item Wir schreiben $\hat{h}(f) = \underbrace{|\hat{h}(f)|}_{=:\hat{h}_{id}(f)} e^{-2\pi i f t_0} \; \invtransform{2.}{1.5} \; h_{id}(t-t_0)$
     \item[] 
     \item $h_{id}(t) = \displaystyle\frac{\sin(2 \pi f_g t)}{\pi t} \; \transform{27.}{1.5} \; \hat{h}_{id}(f) = \displaystyle\begin{cases}
         1, |f| \leq f_g\\
@@ -254,10 +252,10 @@
     \begin{enumerate}
     \item Da $h(t) = 0 \; \forall t < 0$ \textbf{nicht gilt}, ist das ideale Tiefpassfilter \textcolor{red}{\textbf{nicht kausal}}.
     \item[] 
-    \item Es gilt \textbf{nicht}, dass $\displaystyle\int_{-\infty}^{\infty} |h(t)|\text{d}t < \infty$. \\$\implies$ ideales Tiefpassfilter ist \textcolor{red}{\textbf{nicht BIBO-stabil}}.
+    \item Es gilt \textbf{nicht}, dass $\displaystyle\int_{-\infty}^{\infty} |h(t)|\text{d}t < \infty$. \\ (Die Impulsantwort is nicht absolut integrierbar)
     \item[] Grund: Riemann-Lebesgue Lemma
     \item[] 
-    \item[1.\&2.] $\implies$ Ideale Tiefpassfilter sind \textcolor{red}{\textbf{nicht realisierbar}} in der Praxis. Wir müssen das Filter kausal und BIBO-stabil machen!
+    \item[1.\&2.] $\implies$ Ideale Tiefpassfilter sind \textcolor{red}{\textbf{nicht realisierbar}} in der Praxis. Wir müssen das Filter kausal und h absolut integrierbar (damit BIBO-Stabilität garantiert ist) machen!
 \end{enumerate}
 \end{frame}
 

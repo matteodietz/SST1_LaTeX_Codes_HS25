@@ -316,10 +316,10 @@ $$\hat{h}(f) = |\hat{h}(f)|e^{i \varphi(f)}, \hspace{12pt} \text{wobei} \hspace{
 \subsubsection*{Wichtige Bemerkungen}
 \begin{enumerate}
     \item Da $h(t) = 0 \; \forall t < 0$ \textbf{nicht gilt}, ist das ideale Tiefpassfilter \textcolor{red}{\textbf{nicht kausal}}.
-    \item Es gilt \textbf{nicht}, dass $\displaystyle\int_{-\infty}^{\infty} |h(t)|\text{d}t < \infty$, d.h. die Impulsantwort ist nicht absolut integrierbar. Somit ist das ideale Tiefpassfilter \textcolor{red}{\textbf{nicht BIBO-stabil}}.
+    \item Es gilt \textbf{nicht}, dass $\displaystyle\int_{-\infty}^{\infty} |h(t)|\text{d}t < \infty$, d.h. die Impulsantwort ist nicht absolut integrierbar. Wenn $h\in L^1$ wäre, dann hätten wir für das ideale Tiefpassfilter garantiert \textcolor{red}{\textbf{BIBO-Stabilität}}. Dies ist aber nicht der Fall.
     \item[] Der Grund hierfür liegt im Riemann-Lebesgue Lemma, das besagt, dass wenn das Signal $x$ absolut integrierbar ist, dann ist $(\mathcal{F}x)(f) = \hat{x}(f)$ stetig und es gilt $\displaystyle\lim_{|f|\to \infty}(\mathcal{F}x)(f)=0$.
     \item[] Da nun $\hat{h}(f)$ nicht stetig ist $\implies h(t)$ nicht absolut integrierbar.
-    \item[1.\&2.] $\implies$ Ideale Tiefpassfilter sind \textcolor{red}{\textbf{nicht realisierbar}} in der Praxis. Wir müssen das Filter kausal und BIBO-stabil machen!
+    \item[1.\&2.] $\implies$ Ideale Tiefpassfilter sind \textcolor{red}{\textbf{nicht realisierbar}} in der Praxis. Wir müssen das Filter kausal und $h$ absolut integrierbar machen! (Für BIBO-Stabilität)
 \end{enumerate}
 
 \pagebreak
