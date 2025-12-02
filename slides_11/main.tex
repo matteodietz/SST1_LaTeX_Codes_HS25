@@ -100,7 +100,7 @@
         \item Die DTFT des Signals ist
         $$\hat{x}(\theta) = \sum_{n=-\infty}^\infty x[n]e^{-2 \pi i \theta n} = \sum_{n=0}^{N-1} x[n]e^{-2 \pi i \theta n}$$
         \item $\hat{x}(\theta)$ ist kontinuierlich. Wir tasten $\hat{x}(\theta)$ im Frequenzbereich ab.
-        $$\hat{x}[k] := \hat{x}\left(\frac{k}{N}\right) = \sum_{n=0}^{N-1} x[n]e^{-2 \pi i \frac{k}{N}} $$
+        $$\hat{x}[k] := \hat{x}\left(\frac{k}{N}\right) = \sum_{n=0}^{N-1} x[n]e^{-2 \pi i \frac{k}{N}n} $$
     \end{itemize}
 \end{frame}
 
@@ -184,8 +184,8 @@ $$\underbrace{\begin{bmatrix}
 \begin{itemize}
     \item[] 
     \item[] 
-    \item[] Die Spalten von $F_N$ sind orthogonal aufeinander: $\langle \mathbf{f}_r, \; \mathbf{f}_s \rangle = \delta_{r,s}$
-    \item[] 
+    \item[] Die Spalten von $F_N$ sind orthogonal aufeinander: 
+    \item[] $\langle \mathbf{f}_r,\mathbf{f}_s \rangle = N\delta_{r,s}$
     \item[] Es gilt $F_N F_N^H = N I_N$
 \end{itemize}
 \end{frame}
@@ -261,7 +261,7 @@ $$ \hat{\mathbf{x}} = \begin{bmatrix}
 
 \begin{frame}{Lineare Faltung}
     $x_1[n]$ hat Länge $L$ und $x_2[n]$ hat Länge $P$. Wir wollen berechnen:
-    $$ x_3[n] = \sum_{l=-\infty}^\infty x_1[l]\cdot x_2[n-l] = \sum_{l=-0}^{L-1} x_1[l]\cdot x_2[n-l] $$
+    $$ x_3[n] = \sum_{l=-\infty}^\infty x_1[l]\cdot x_2[n-l] = \sum_{l=0}^{L-1} x_1[l]\cdot x_2[n-l] $$
     \begin{itemize}
         \item[] 
         \item[] 
