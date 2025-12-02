@@ -240,9 +240,9 @@ $$\underbrace{\begin{bmatrix}
     }%
 }
 
-Die Spalten von $F_N$ sind orthogonal aufeinander. Sei $\mathbf{f}_i$ die $i-$te Spalte von $F_N$. Es gilt $\langle \mathbf{f}_r, \; \mathbf{f}_s \rangle = \delta_{r,s}$
+Die Spalten von $F_N$ sind paarweise orthogonal. Sei $\mathbf{f}_i$ die $i-$te Spalte von $F_N$. 
 
-Es gilt $F_N F_N^H = N I_N$, wobei $I_N$ die Identitätsmatrix der Dimension $N$ ist.
+Dann $\langle \mathbf{f}_r, \; \mathbf{f}_s \rangle = N\delta_{r,s}$. Es gilt $F_N F_N^H = N I_N$, wobei $I_N$ die Identitätsmatrix der Dimension $N$ ist.
 
 Die DFT ist entspricht einer Entwicklung des Vektors $\mathbf{x}$ in eine orthonormale Basis (ONB) in $\mathbb{C}^N$:
 
@@ -336,7 +336,7 @@ In der Praxis wollen wir nicht unbedingt immer mit $N-$periodisch fortgesetzten 
 \subsection*{Lineare Faltung}
 \vspace*{-0.5cm}
 Wir betrachten $x_1[n]$ der Länge $L$ und $x_2[n]$ der Länge $P$ und wollen folgende Faltung berechnen:
-$$ x_3[n] = \sum_{l=-\infty}^\infty x_1[l]\cdot x_2[n-l] = \sum_{l=-0}^{L-1} x_1[l]\cdot x_2[n-l] $$
+$$ x_3[n] = \sum_{l=-\infty}^\infty x_1[l]\cdot x_2[n-l] = \sum_{l=0}^{L-1} x_1[l]\cdot x_2[n-l] $$
 Da $x_2$ Länge $P$ hat, muss $n-l \in \{ 0, \; 1, \; \dots, \; P-1 \}$, liegen, damit der $x_2$-Term nicht null ist. Das ist äquivalent zu den Bedingungen:
 $$ n \in \{l, \; l+1, \; \dots , \; l+P-1\} \text{ für } l \in \{ 0, \; \dots, \; L-1 \} \Leftrightarrow n \in \{0, \; 1, \; \dots, \; L+P-2\}$$
 Somit hat das Ergebnis der Faltung Länge $L+P-1$. Wenn wir diese Faltung nun mit zyklischer Faltung berechnen wollen, müssen wir die Periodendauer $N$ so wählen, dass $N \geq P + L -1$. Dann überlappen sich die $N-$periodisch fortgesetzten Kopien der Faltung nicht und somit haben wir dann \textbf{kein Aliasing}.
@@ -464,7 +464,7 @@ $\mathbf{X}_2$ ist eine \textbf{zirkulante Matrix}. Eine zirkulante Matrix ist d
 \begin{enumerate}
     \item Die Eigenvektoren einer zirkulanten Matrix sind die Spalten der normalisierten DFT-Matrix $\frac{1}{\sqrt{N}}\mathbf{F}_N^H$ und die dazugehörigen Eigenwerte sind durch die DFT der ersten Spalte der zirkulanten Matrix gegeben. 
     \item Dies entspricht im zeitkontinuierlichen Fall der Eigenschaft, dass die
-    Funktionen $e^{2 \pi i f_0 t}$ Eigenfunktionen von LTI-Systemen sind und $\hat{h}(f)$ die dazugehörigen Eigenwerte. Anstelle von $e^{2 \pi i f_0 t}$ haben wir hier die Spalten von $\frac{1}{\sqrt{N}}\mathbf{F}_N^H$ und anstelle von $\hat{h}(f)$ die Werte $\hat{h}[k] = x_2[k]$.
+      Funktionen $e^{2 \pi i f_0 t}$ Eigenfunktionen von LTI-Systemen sind und $\hat{h}(f)$ die dazugehörigen Eigenwerte. Anstelle von $e^{2 \pi i f_0 t}$ haben wir hier die Spalten von $\frac{1}{\sqrt{N}}\mathbf{F}_N^H$ und anstelle von $\hat{h}(f)$ die Werte $\hat{h}[k] = \hat{x}_2[k]$.
     \item \textbf{Die zyklische Faltung wird durch die DFT diagonalisiert}.
 \end{enumerate}
 
